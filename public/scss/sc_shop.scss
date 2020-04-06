@@ -1,0 +1,630 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  list-style: none;
+  font-family: "Microsoft JhengHei";
+  position: relative;
+
+  //------------------------------此區可對物品添加陰影
+  .box-shadow {
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+  }
+  .drop-shadow {
+    filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
+  }
+  // ------------------------------
+  header {
+
+    .banner {
+      height: 1080px;
+      background-image: url(../img/sc_shop/banner_light.png);
+      background-size: cover;
+      background-position: center;
+      // padding: 5%;
+      display: flex;
+      align-items: center;
+      .navbar {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        svg {
+          width: 40px;
+          fill: white;
+          display: none;
+          @media (max-width: 1000px) {
+            display: block;
+            // align-self: flex-end;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-10px, 10px);
+          }
+        }
+        .nav_container {
+          height: 300px;
+          li {
+            padding: 0;
+          }
+          @media (max-width: 1000px) {
+            display: flex;
+            justify-content: center;
+          }
+          .nav-item {
+            @media (max-width: 1000px) {
+              display: none;
+            }
+          }
+          a {
+            font-size: 30px;
+            color: white;
+            transition: 0.5s;
+            padding: unset;
+            @media (max-width: 960px) {
+              font-size: 20px;
+            }
+            @media (max-width: 768px) {
+              font-size: 16px;
+            }
+
+            &:hover {
+              color: #806029;
+            }
+            .cy_logo {
+              // padding: 15% 0;
+              width: 255px;
+            }
+          }
+        }
+      }
+      .calendar_container {
+        .calendar {
+          width: 570px;
+          transform: translate(0, 195px);
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .news_container {
+    width: 100%;
+    background-color: #f6d498;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .news_content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .news_title {
+        font-size: 30px;
+        padding: 75px 0 52.5px;
+      }
+      .news_title_btm {
+        width: 100%;
+        .news_inner_content {
+          color: #806029;
+          font-size: 20px;
+          border-bottom: 2px #806029 solid;
+          letter-spacing: 5px;
+
+          cursor: pointer;
+          padding: 22.5px 0;
+          div {
+            &:nth-child(1) {
+              padding-right: 48px;
+            }
+            &:nth-child(3) {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+
+      .news_link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+        padding: 5% 0;
+        &:hover {
+          .line-T {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+          }
+          .line-B {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+
+        .line-T {
+          height: 2px;
+          width: 80px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #270501;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: left;
+          }
+        }
+        div {
+          color: #270501;
+          font-size: 20px;
+        }
+        .line-B {
+          height: 2px;
+          width: 80px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #270501;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: right;
+          }
+        }
+      }
+    }
+  }
+
+  .sec_background_top {
+    width: 100%;
+    height: 528px;
+    @media (max-width: 1200px) {
+      margin: unset;
+    }
+    .product_bg_T {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sc_shop/parallax_light_1.png);
+      background-size: cover;
+      background-position: bottom;
+      background-attachment: fixed;
+    }
+  }
+  .container-fluid {
+    padding: unset;
+  }
+  .sec_container {
+    width: 100%;
+    height: 1080px;
+    background-color: #f6d498;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    @media (max-width: 1200px) {
+      height: unset;
+    }
+    .sec_position_btm {
+      width: 100%;
+      min-height: 100vh;
+      color: #ffbf52;
+      position: absolute;
+      top: 20vh;
+      z-index: 1;
+      .sec_position_btm_list {
+        background-color: #56380c;
+        position: relative;
+        div {
+          &:nth-child(1) {
+            padding: 65px 30px 30px 150px;
+            @media (max-width: 1200px) {
+              padding: 65px 65px 0 35px;
+            }
+            p,
+            span {
+              color: #ccb07e;
+            }
+          }
+        }
+        .sec_position_btm_list_photo {
+          width: 100%;
+          // position: relative;
+          // top: 50%;
+          // z-index: 3;
+          // transform: translate(-80%, -50%);
+          padding: unset;
+          @media (max-width: 1200px) {
+            // position: unset;
+            // padding-top: 65px;
+            // top: 2600px;
+            // transform: translate(25%, 0);
+            // width: 300px;
+            transform: unset;
+            top: unset;
+          }
+          @media (max-width: 990px) {
+            transform: translate(-5%, 0);
+            width: 300px;
+          }
+          img {
+            width: 540px;
+            height: 540px;
+            position: absolute;
+            
+            @media (max-width: 1200px) {
+              width: 250px;
+              height: 250px;
+              position: relative;
+              top: 120px;
+              transform: translate(0%, 0);
+              width: 300px;
+            }
+            @media (max-width: 990px) {
+              width: 200px;
+              height: 200px;
+            }
+          }
+        }
+      }
+
+      // @media(max-width:1200px) {
+      //   position: relative;
+      // }
+      // &::before {
+      //   content: "";
+      //   color: white;
+      //   max-width: 135%;
+      //   width: 135%;
+      //   height: 60vh;
+      //   background-color:#414141 ;
+      //   position: absolute;
+      //   left: 0;
+      //   z-index: 1;
+      // }
+      &::after {
+        content: "";
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        background-color: #56380c;
+        right: 0;
+        bottom: 0;
+        transform: translate(50%, 0);
+        z-index: -1;
+      }
+
+      @media (max-width: 1200px) {
+        width: 100%;
+        order: 2;
+        position: unset;
+      }
+    }
+    // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
+    // .sec_position_top {
+    //   width: 25vw;
+    //   max-width: 320px;
+    //   min-width: 250px;
+    //   height: 25vw;
+    //   max-height: 320px;
+    //   min-height: 250px;
+    //   padding: 1% 0;
+    //   position: absolute;
+    //   top: 20%;
+    //   left: 10%;
+    //   align-items: center;
+    //   z-index: 2;
+    //   img {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   @media (max-width: 1200px) {
+    //     visibility: hidden;
+    //   }
+    // }
+    // .sec_background_btm {
+    //   align-self: flex-end;
+    //   width: 100%;
+    //   height: 30vh;
+    //   position: absolute;
+    //   // right: 0;
+    //   bottom: 12%;
+    //   &::after {
+    //     content: "";
+    //     max-width: 135%;
+    //     width: 135%;
+    //     height: 30vh;
+    //     position: absolute;
+    //     background-color: #c0c8b9;
+    //     bottom: 12%;
+    //     right: 0;
+    //     z-index: 0;
+    //     @media (max-width: 1200px) {
+    //       display: none;
+    //     }
+    //   }
+    // }
+  }
+  .sec_background_btm {
+    width: 100%;
+    height: 528px;
+    @media (max-width: 1200px) {
+      margin: unset;
+    }
+    .product_bg_B {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/sc_shop/parallax_light_2.png);
+      background-size: cover;
+      background-position: top;
+      background-attachment: fixed;
+    }
+  }
+  // .card_container {
+  //   background-color: #f6d498;
+  //   background-size: cover;
+  //   padding: 0 5%;
+  //   position: relative;
+  // }
+  // .card_desk {
+  //   width: 100%;
+  //   padding: 10% 0;
+  //   justify-content: space-around;
+
+  //   .card {
+  //     width: 25%;
+  //     padding: 20px 0;
+  //     background-color: #97b6d4;
+  //     @media (max-width: 990px) {
+  //       width: 30%;
+  //     }
+  //     @media (max-width: 768px) {
+  //       width: 100%;
+  //       margin: 10px 0;
+  //     }
+  //     .card_title {
+  //       color: #193150;
+  //       font-size: 30px;
+  //       padding: 5% 10%;
+  //       margin: auto;
+  //     }
+  //     .card_text {
+  //       color: #045658;
+  //       font-size: 20px;
+  //       padding: 5% 10% 20%;
+  //       margin: auto;
+  //     }
+
+  //     .card_link {
+  //       display: flex;
+  //       flex-direction: column;
+  //       align-items: center;
+
+  //       &:hover {
+  //         .line-T {
+  //           &::before {
+  //             transform: scaleX(1);
+  //             transform-origin: right;
+  //           }
+  //         }
+  //         .line-B {
+  //           &::before {
+  //             transform: scaleX(1);
+  //             transform-origin: left;
+  //           }
+  //         }
+  //       }
+
+  //       .line-T {
+  //         height: 2px;
+  //         width: 70px;
+  //         background-color: rgba(0, 0, 0, 0.2);
+  //         &::before {
+  //           content: "";
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: #270501;
+  //           transform: scaleX(0);
+  //           transition: transform 0.3s;
+  //           transform-origin: left;
+  //         }
+  //       }
+  //       div {
+  //         color: #270501;
+  //         font-size: 20px;
+  //       }
+  //       .line-B {
+  //         height: 2px;
+  //         width: 70px;
+  //         background-color: rgba(0, 0, 0, 0.2);
+  //         &::before {
+  //           content: "";
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: #270501;
+  //           transform: scaleX(0);
+  //           transition: transform 0.3s;
+  //           transform-origin: right;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  .swiper-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6d498;
+    padding-bottom: 150px;
+    .swiper_title {
+      font-size: 30px;
+      color: #56380c;
+      padding: 75px 0;
+    }
+    .swiper-wrapper{
+      height: unset;
+    }
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // padding-bottom: 3%;
+      .card {
+        width: 100%;
+        background-color: #56380c;
+        .card_title {
+          color: #ffbf52;
+          font-size: 30px;
+          padding: 5% 10%;
+          margin: auto;
+        }
+        .card_text {
+          color: #ccb07e;
+          font-size: 20px;
+          padding: 5% 15%;
+          // margin: auto;
+        }
+
+        .card_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 5%;
+          &:hover {
+            .line-T {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: right;
+              }
+            }
+            .line-B {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+          }
+
+          .line-T {
+            height: 2px;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.2);
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #ccb07e;
+              transform: scaleX(0);
+              transition: transform 0.3s;
+              transform-origin: left;
+            }
+          }
+          div {
+            color: #ccb07e;
+            font-size: 20px;
+          }
+          .line-B {
+            height: 2px;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.2);
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #ccb07e;
+              transform: scaleX(0);
+              transition: transform 0.3s;
+              transform-origin: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+  background-color: #414141;
+    padding: 3% 20%;
+    .footer_top {
+      width: 100%;
+      margin-bottom: 15px;
+      .logo {
+        width: 30%;
+        margin-right: 10%;
+      }
+      .adress {
+        padding: 0 30px;
+        li {
+          color: white;
+        }
+        li {
+          color: white;
+          min-width: 50px;
+          margin-right: 30px;
+          @media (max-width: 684px) {
+            margin: unset;
+          }
+        }
+        .icon {
+          #facebook_icon {
+            stroke: white;
+            stroke-width: 10;
+            &:hover {
+              stroke: blue;
+              fill: blue;
+            }
+          }
+          // 先設定stroke(邊框)顏色及粗細，然後再設定hover後的狀態
+          svg {
+            width: 24px;
+            transition: 0.5s;
+            margin: 5px;
+            #path1,
+            #path2,
+            #path3 {
+              fill: white;
+            }
+            &:hover {
+              transition: 0.3s;
+              #path1 {
+                fill: url(#SVGID_1_);
+              }
+              #path2 {
+                fill: url(#SVGID_2_);
+              }
+              #path3 {
+                fill: url(#SVGID_3_);
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer_line {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+    }
+    .footer_btm {
+      padding: 15px 0;
+      color: white;
+    }
+  }
+}

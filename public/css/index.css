@@ -1,0 +1,387 @@
+body {
+  margin: 0;
+  position: relative;
+}
+
+body .nav_hamburger {
+  z-index: 5;
+  background-color: rgba(255, 0, 0, 0);
+  position: relative;
+}
+
+body .nav_hamburger #header {
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2000;
+}
+
+body .nav_hamburger #menu {
+  background: #de4152;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: all 0.7s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1100;
+  background-color: #78ccb6;
+}
+
+body .nav_hamburger #menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+body .nav_hamburger #menu.open li:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+body .nav_hamburger #menu.open li:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+body .nav_hamburger #menu.open li {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+
+body .nav_hamburger #menu ul:hover a {
+  opacity: 0.5;
+}
+
+body .nav_hamburger #menu ul a {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transition: opacity 0.3s ease-in-out;
+}
+
+body .nav_hamburger #menu ul a:hover {
+  opacity: 1;
+}
+
+body .nav_hamburger #menu .main-nav {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body .nav_hamburger #menu .main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body .nav_hamburger #menu .main-nav a {
+  color: #ffffff;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body .nav_hamburger #menu .main-nav a:first {
+  padding-top: 0;
+}
+
+body .nav_hamburger #menu .menu-footer {
+  padding: 2rem;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+body .nav_hamburger #menu .menu-footer ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body .nav_hamburger #menu .menu-footer ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+body .nav_hamburger #menu .menu-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body .nav_hamburger .toggle-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  outline: none;
+  padding: 0;
+  pointer-events: initial;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  z-index: 1110;
+}
+
+body .nav_hamburger .toggle-menu span {
+  background-color: #fff;
+  content: "";
+  height: 2px;
+  left: calc(50% - 13px);
+  position: absolute;
+  top: calc(50% - 1px);
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+  width: 26px;
+}
+
+body .nav_hamburger .toggle-menu span:before,
+body .nav_hamburger .toggle-menu span:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+  width: 26px;
+}
+
+body .nav_hamburger .toggle-menu span:before {
+  top: 7px;
+}
+
+body .nav_hamburger .toggle-menu span:after {
+  top: -7px;
+}
+
+body .nav_hamburger .toggle-menu.active span {
+  background-color: transparent;
+  transition: background 0.2s ease-out;
+}
+
+body .nav_hamburger .toggle-menu.active span:before,
+body .nav_hamburger .toggle-menu.active span:after {
+  transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+
+body .nav_hamburger .toggle-menu.active span:before {
+  top: 0;
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+body .nav_hamburger .toggle-menu.active span:after {
+  top: 0;
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+body .cid-rTpW4eKEc3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+  background-color: #78ccb6;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure {
+  width: 100%;
+  height: 50%;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure:hover .banner_plant .banner_mask .banner_plantTitle {
+  opacity: 0;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure:hover .banner_restaurant .banner_mask .banner_restaurantTitle {
+  opacity: 0;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant {
+  width: 40%;
+  height: 100%;
+  flex: 1;
+  background-image: url(/images/83498394_2983421545025805_643096925087727616_n.jpg?23c6ff3711fc1eab769f2727b5b0a03e);
+  background-size: cover;
+  background-position: center;
+  transition: 2s;
+  position: relative;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant .plant_logo {
+  width: 200px;
+  height: 200px;
+  background-image: url(/images/cy_logo_big.png?9151cc4a54f889c86b72d89f215c85c0);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  opacity: 0;
+  transition: 0.8s linear;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant .banner_mask {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  transition: 2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant .banner_mask .banner_plantTitle {
+  font-size: 32px;
+  color: white;
+  display: flex;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant:hover {
+  flex: 10;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant:hover .banner_mask {
+  opacity: 0;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant:hover .plant_logo {
+  opacity: 1;
+  transition: 0.8s linear;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant {
+  width: 40%;
+  height: 100%;
+  flex: 1;
+  background-image: url(/images/29472173_1825757644125540_4426064296467759104_o.jpg?451e4eca1c856ae601a9e4009c4a27d0);
+  background-size: cover;
+  background-position: center;
+  transition: 2s;
+  position: relative;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant .restaurant_logo {
+  width: 200px;
+  height: 200px;
+  background-image: url(/images/sc_logo_big.png?58fa946136b327bb2d66670ca0e0f89b);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  opacity: 0;
+  transition: 0.8s linear;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant .banner_mask {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  transition: 2s;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant .banner_mask .banner_restaurantTitle {
+  font-size: 32px;
+  color: white;
+  display: flex;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant:hover {
+  flex: 10;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant:hover .banner_mask {
+  opacity: 0;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant:hover .restaurant_logo {
+  opacity: 1;
+  transition: 0.8s linear;
+}
+
+body .white_section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .white_section #map {
+  width: 100%;
+  height: 100%;
+}
+

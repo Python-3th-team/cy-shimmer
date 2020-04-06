@@ -1,0 +1,638 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  list-style: none;
+  font-family: "Microsoft JhengHei";
+  position: relative;
+
+  //------------------------------此區可對物品添加陰影
+  .box-shadow {
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
+  }
+  .drop-shadow {
+    filter: drop-shadow(0 12px 3px rgba(0, 0, 0, 0.6));
+  }
+  // ------------------------------
+
+  // .banner {
+  //   height: 100vh;
+  //   background-image: url(../img/banner.jpg);
+  //   background-size: cover;
+  //   padding: 0 5%;
+
+  //   ul {
+  //     padding: 10px;
+  //     a {
+  //       font-size: 28px;
+  //       color: #270501;
+  //       transition: 0.5s;
+
+  //       @media (max-width: 960px) {
+  //         font-size: 24px;
+  //       }
+  //       @media (max-width: 768px) {
+  //         font-size: 20px;
+  //       }
+  //       @media (max-width: 650px) {
+  //         font-size: 16px;
+  //       }
+  //       &:hover {
+  //         color: crimson;
+  //       }
+  //     }
+  //   }
+  //   .cy_logo {
+  //     padding: 5% 0 10%;
+  //     width: 100%;
+  //   }
+  // }
+  header {
+    .banner {
+      height: 1080px;
+      background-image: url(../img/sc_shop/banner_light.png);
+      background-size: cover;
+      background-position: center;
+      // padding: 5%;
+      display: flex;
+      align-items: center;
+      .navbar {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        svg {
+          width: 40px;
+          fill: white;
+          display: none;
+          @media (max-width: 1000px) {
+            display: block;
+            // align-self: flex-end;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-10px, 10px);
+          }
+        }
+        .nav_container {
+          height: 300px;
+          li {
+            padding: 0;
+          }
+          @media (max-width: 1000px) {
+            display: flex;
+            justify-content: center;
+          }
+          .nav-item {
+            @media (max-width: 1000px) {
+              display: none;
+            }
+          }
+          a {
+            font-size: 30px;
+            color: white;
+            transition: 0.5s;
+            padding: unset;
+            @media (max-width: 960px) {
+              font-size: 20px;
+            }
+            @media (max-width: 768px) {
+              font-size: 16px;
+            }
+
+            &:hover {
+              color: #092b00;
+            }
+            .cy_logo {
+              // padding: 15% 0;
+              width: 255px;
+            }
+          }
+        }
+      }
+      .calendar_container {
+        .calendar {
+          width: 570px;
+          transform: translate(0, 195px);
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .news_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .news_content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .news_title {
+        font-size: 30px;
+        padding: 75px 0 52.5px;
+        color: #66c302;
+      }
+      .news_title_btm {
+        width: 100%;
+        .news_inner_content {
+          color: #092b00;
+          font-size: 20px;
+          border-bottom: 2px #092b00 solid;
+          letter-spacing: 5px;
+          cursor: pointer;
+          // 讓滑鼠變更圖案
+          padding: 22.5px 0;
+          div {
+            &:nth-child(1) {
+              color:#93B342 ;
+              padding-right: 48px;
+            }
+            &:nth-child(3) {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+
+      .news_link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+        padding: 5% 0;
+        cursor: pointer;
+        &:hover {
+          .line-T {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+          }
+          .line-B {
+            &::before {
+              transform: scaleX(1);
+              transform-origin: left;
+            }
+          }
+        }
+
+        .line-T {
+          height: 2px;
+          width: 80px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #270501;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: left;
+          }
+        }
+        div {
+          color: #270501;
+          font-size: 20px;
+        }
+        .line-B {
+          height: 2px;
+          width: 80px;
+          background-color: rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #270501;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: right;
+          }
+        }
+      }
+    }
+  }
+  .sec_background_top {
+    width: 100%;
+    height: 528px;
+    @media (max-width: 1200px) {
+      margin: unset;
+    }
+    .product_bg_T {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/cy_plant/parallax_sun_1.svg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  }
+
+  .sec_container {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    @media (max-width: 1200px) {
+      height: unset;
+    }
+    .sec_position_top_hidden {
+      width: 100%;
+      background-color: white;
+      align-items: center;
+      visibility: hidden;
+      padding-top: 65px;
+      @media (max-width: 1200px) {
+        height: unset;
+        visibility: visible;
+      }
+      .sec_position_top_hidden_title {
+        font-size: 30px;
+        color: #66c302;
+      }
+      .sec_position_mid_hidden_title {
+        font-size: 20px;
+        padding:  65px 0;
+        color: #092b00;
+      }
+      .sec_position_btm_hidden_content {
+        padding-bottom:65px;
+        font-size: 20px;
+        color: #270501;
+
+      }
+    }
+
+    .sec_position_btm {
+      // width: 100%;
+      min-height: 810px;
+      position: absolute;
+      top: 10vh;
+      z-index: 1;
+      &::before {
+        content: "";
+        max-width: 135%;
+        width: 135%;
+        height: 810px;
+        background-image: url(../img/plant.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+      // &::after {
+      //   content: "";
+      //   max-width: 135%;
+      //   width: 135%;
+      //   height: 30vh;
+      //   position: absolute;
+      //   background-color: #172c14;
+      //   bottom: 10%;
+      //   left: 0;
+      //   z-index: 0;
+      //   @media (max-width: 1200px) {
+      //     display: none;
+      //   }
+      // }
+      @media (max-width: 1200px) {
+        width: 100%;
+        order: 2;
+        position: unset;
+      }
+    }
+    // 今天利用bootstrap的container去切齊邊線，因為bootstrap本身有padding，所以採用::before方式蓋掉原本的圖案，解決固有padding問題
+    .sec_position_top {
+      width: 540px;
+      height: 540px;
+      background-color: #E3E4E8;
+      position: absolute;
+      top: 25%;
+      right: 10%;
+      align-items: center;
+      z-index: 2;
+      padding: 0 65px;
+      @media (max-width: 1200px) {
+        visibility: hidden;
+      }
+      .sec_position_top_title {
+        font-size: 30px;
+        color: #66c302;
+        padding-top: 65px;
+        // @media (max-width: 1440px) {
+        //   font-size: 23px;
+        // }
+      }
+      .sec_position_top_title2 {
+        font-size: 20px;
+        padding: 65px 0;
+        color: #092b00;
+        // @media (max-width: 1440px) {
+        //   font-size: 14px;
+        // }
+      }
+      .sec_position_top_content {
+        flex: 6;
+        font-size: 20px;
+        color: #270501;
+        // @media (max-width: 1280px) {
+        //   font-size: 15px;
+        // }
+      }
+    }
+
+    // .sec_background_btm {
+    //   align-self: flex-end;
+    //   width: 100%;
+    //   height: 30vh;
+    //   position: absolute;
+    //   // right: 0;
+    //   bottom: 12%;
+    //   &::after {
+    //     content: "";
+    //     max-width: 135%;
+    //     width: 135%;
+    //     height: 30vh;
+    //     position: absolute;
+    //     background-color: #172c14;
+    //     bottom: 12%;
+    //     left: 0;
+    //     z-index: 0;
+    //     @media (max-width: 1200px) {
+    //       display: none;
+    //     }
+    //   }
+    // }
+  }
+  .sec_background_btm {
+    width: 100%;
+    height: 528px;
+    @media (max-width: 1200px) {
+      margin: unset;
+    }
+    .product_bg_B {
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/cy_plant/parallax_sun_2.svg);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  }
+  .swiper-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 150px;
+    .swiper_title {
+      font-size: 30px;
+      color: #56380c;
+      padding: 75px 0;
+    }
+    .swiper-wrapper{
+      height: unset;
+    }
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // padding-bottom: 3%;
+      .card {
+        width: 100%;
+        border: 2px black solid;
+        border-radius: 2%;
+        .card_title {
+          color: #66c302;
+          font-size: 30px;
+          padding: 5% 10%;
+          margin: auto;
+        }
+        .card_text {
+          color: #092b00;
+          font-size: 20px;
+          padding: 5% 15%;
+          // margin: auto;
+        }
+
+        .card_link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 5%;
+          &:hover {
+            .line-T {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: right;
+              }
+            }
+            .line-B {
+              &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+              }
+            }
+          }
+
+          .line-T {
+            height: 2px;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.2);
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #270501;
+              transform: scaleX(0);
+              transition: transform 0.3s;
+              transform-origin: left;
+            }
+          }
+          div {
+            color: #270501;
+            font-size: 20px;
+          }
+          .line-B {
+            height: 2px;
+            width: 70px;
+            background-color: rgba(0, 0, 0, 0.2);
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              background-color: #270501;
+              transform: scaleX(0);
+              transition: transform 0.3s;
+              transform-origin: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .card_container {
+  //   background-image: url(../img/background.jpg);
+  //   background-size: cover;
+  // }
+  // .card_desk {
+  //   width: 100%;
+  //   padding: 5% 0;
+  //   justify-content: space-around;
+  //   .card {
+  //     width: 30%;
+  //     padding: 20px 0;
+  //     background-color: #577e6c;
+
+  //     @media (max-width: 768px) {
+  //       width: 100%;
+  //       margin: 10px 0;
+  //     }
+  //     .card_title {
+  //       color: #66c302;
+  //       font-size: xx-large;
+  //       padding: 5% 10%;
+  //       margin: auto;
+  //     }
+  //     .card_text {
+  //       color: #092b00;
+  //       padding: 5% 10% 20%;
+  //       margin: auto;
+  //     }
+
+  //     .card_link {
+  //       display: flex;
+  //       flex-direction: column;
+  //       align-items: center;
+
+  //       &:hover {
+  //         .line-T {
+  //           &::before {
+  //             transform: scaleX(1);
+  //             transform-origin: right;
+  //           }
+  //         }
+  //         .line-B {
+  //           &::before {
+  //             transform: scaleX(1);
+  //             transform-origin: left;
+  //           }
+  //         }
+  //       }
+
+  //       .line-T {
+  //         height: 2px;
+  //         width: 70px;
+  //         background-color: rgba(0, 0, 0, 0.2);
+  //         &::before {
+  //           content: "";
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: #66c302;
+  //           transform: scaleX(0);
+  //           transition: transform 0.3s;
+  //           transform-origin: left;
+  //         }
+  //       }
+  //       .line-B {
+  //         height: 2px;
+  //         width: 70px;
+  //         background-color: rgba(0, 0, 0, 0.2);
+  //         &::before {
+  //           content: "";
+  //           display: block;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: #66c302;
+  //           transform: scaleX(0);
+  //           transition: transform 0.3s;
+  //           transform-origin: right;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  footer {
+    width: 100%;
+    background-color: #414141;
+    padding: 3% 20%;
+    .footer_top {
+      width: 100%;
+      margin-bottom: 15px;
+      .logo {
+        width: 30%;
+        margin-right: 10%;
+      }
+      .adress {
+        padding: 0 30px;
+        li {
+          color: white;
+        }
+        li {
+          color: white;
+          min-width: 50px;
+          margin-right: 30px;
+          @media (max-width: 684px) {
+            margin: unset;
+          }
+        }
+        .icon {
+          #facebook_icon {
+            stroke: white;
+            stroke-width: 9;
+            &:hover {
+              stroke: blue;
+              fill: blue;
+            }
+          }
+          // 先設定stroke(邊框)顏色及粗細，然後再設定hover後的狀態
+          svg {
+            width: 24px;
+            transition: 0.5s;
+            margin: 5px;
+            #path1,
+            #path2,
+            #path3 {
+              fill: white;
+            }
+            &:hover {
+              transition: 0.3s;
+              #path1 {
+                fill: url(#SVGID_1_);
+              }
+              #path2 {
+                fill: url(#SVGID_2_);
+              }
+              #path3 {
+                fill: url(#SVGID_3_);
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer_line {
+      width: 100%;
+      height: 2px;
+      background-color: white;
+    }
+    .footer_btm {
+      padding: 15px 0;
+      color: white;
+    }
+  }
+}

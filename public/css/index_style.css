@@ -1,0 +1,350 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+body .cid-rTpW4eKEc3 {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure {
+  width: 100%;
+  height: 50%;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure:hover .banner_plant .banner_mask .banner_plantTitle {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure:hover .banner_restaurant .banner_mask .banner_restaurantTitle {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant {
+  width: 40%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-image: url(../img/環境01.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+  position: relative;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant .plant_logo {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/plant_logo.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  opacity: 0;
+  -webkit-transition: 0.8s linear;
+  transition: 0.8s linear;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant .banner_mask {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  -webkit-transition: 2s;
+  transition: 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant .banner_mask .banner_plantTitle {
+  font-size: 32px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant:hover {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant:hover .banner_mask {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_plant:hover .plant_logo {
+  opacity: 1;
+  -webkit-transition: 0.8s linear;
+  transition: 0.8s linear;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant {
+  width: 40%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-image: url(../img/環境03.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+  position: relative;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant .restaurant_logo {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/restaurant_logo.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  opacity: 0;
+  -webkit-transition: 0.8s linear;
+  transition: 0.8s linear;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant .banner_mask {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  -webkit-transition: 2s;
+  transition: 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant .banner_mask .banner_restaurantTitle {
+  font-size: 32px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant:hover {
+  -webkit-box-flex: 10;
+      -ms-flex: 10;
+          flex: 10;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant:hover .banner_mask {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+body .cid-rTpW4eKEc3 .mbr-figure .banner_restaurant:hover .restaurant_logo {
+  opacity: 1;
+  -webkit-transition: 0.8s linear;
+  transition: 0.8s linear;
+}
+
+body .mbr-section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .mbr-section .container {
+  width: 100%;
+  height: 100vh;
+}
+
+body .pagetop_footer {
+  width: 100%;
+  height: 255px;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../img/footer-background.svg);
+  background-position: center;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 20px;
+}
+
+body .pagetop_footer .footer_container {
+  width: 100%;
+  max-width: 1170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+}
+
+body .pagetop_footer .footer_container .footer_logo {
+  width: 50%;
+  height: 157px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .pagetop_footer .footer_container .footer_logo img {
+  width: 157px;
+  height: 157px;
+}
+
+body .pagetop_footer .footer_container .footer_contact {
+  width: 50%;
+  height: 157px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .pagetop_footer .footer_container .footer_contact .social_media {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+body .pagetop_footer .footer_container .footer_contact .social_media .fblogo {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/facebook_7.svg);
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .pagetop_footer .footer_container .footer_contact .social_media .fblogo:hover {
+  background-image: url(../img/facebook_5.svg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .pagetop_footer .footer_container .footer_contact .social_media .iglogo {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/instagram_1.svg);
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .pagetop_footer .footer_container .footer_contact .social_media .iglogo:hover {
+  background-image: url(../img/instagram_2.svg);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .pagetop_footer .footer_container .footer_contact .phpone {
+  width: 100%;
+}
+
+body .pagetop_footer .footer_container .footer_contact .phpone .phpone_number {
+  width: 100%;
+}
+
+body .pagetop_footer .footer_container .footer_contact .business_hour {
+  width: 100%;
+}
+
+body .pagetop_footer .footer_container .footer_contact .address {
+  width: 100%;
+}
+
+body .pagetop_footer .footer_container .white_line {
+  width: 100%;
+  border-top: solid whitesmoke 2px;
+}
+
+body .pagetop_footer .footer_container .footer_copyright {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=index_style.css.map */

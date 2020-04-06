@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  list-style: none;
+}
+
+body .drop-shadow {
+  -webkit-filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.8));
+}
+
+body header {
+  width: 100%;
+  background-color: #d4cb00;
+}
+
+body header .container-fluid {
+  padding: 3% 3% 0 0;
+}
+
+body header .mobile_menu {
+  width: 60px;
+  margin-left: auto;
+  margin-bottom: 3%;
+}
+
+body header .banner_out_border {
+  display: flex;
+}
+
+body header .banner_out_border .banner_border {
+  display: flex;
+  flex-direction: column;
+}
+
+body header .banner_out_border .banner_border .banner_border_T {
+  display: flex;
+  border-bottom: 3px black solid;
+}
+
+body header .banner_out_border .banner_border .banner_border_T .banner_border_TL {
+  width: 50vw;
+  height: 20vh;
+  background-image: url(/img/product_border_TL.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+body header .banner_out_border .banner_border .banner_border_T .banner_border_TR {
+  width: 5vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body header .banner_out_border .banner_border .banner_border_B {
+  display: flex;
+}
+
+body header .banner_out_border .banner_border .banner_border_B .banner_border_BL {
+  width: 10vw;
+  height: 20vh;
+}
+
+body header .banner_out_border .banner_border .banner_border_B .banner_border_BR {
+  width: 6vw;
+  height: 20vh;
+}
+
+body header .banner_out_border .banner_text {
+  align-self: center;
+  font-size: 30px;
+}
+
+body main {
+  width: 100%;
+  background-color: #5e7467;
+}
+
+body main .main_line {
+  margin-left: auto;
+  width: 70%;
+  border-top: 3px white solid;
+}
+
+body main .cards {
+  width: 100%;
+  padding: 65px 0;
+}
+
+body main .cards .card {
+  width: 48%;
+  background-color: #5e7467;
+  padding: unset;
+  border: unset;
+}
+
+body main .cards .card:nth-child(odd) {
+  margin-right: 4%;
+}
+
+body main .cards .card:nth-child(1),
+body main .cards .card:nth-child(2) {
+  margin-bottom: 4%;
+}
+
+body main .cards .card .card_title {
+  font-size: 20px;
+}
+
+body main .cards .card .card_price {
+  color: white;
+  font-size: 20px;
+}
+
+body footer {
+  width: 100%;
+  background-color: #aab2a2;
+  padding: 3% 20%;
+}
+
+body footer .footer_top {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+body footer .footer_top .logo {
+  width: 30%;
+  margin-right: 10%;
+}
+
+body footer .footer_top .adress {
+  padding: 0 30px;
+}
+
+body footer .footer_top .adress li {
+  color: white;
+}
+
+body footer .footer_top .adress li {
+  color: white;
+  min-width: 50px;
+  margin-right: 30px;
+}
+
+@media (max-width: 684px) {
+  body footer .footer_top .adress li {
+    margin: unset;
+  }
+}
+
+body footer .footer_top .adress .icon #facebook_icon {
+  stroke: black;
+  stroke-width: 9;
+}
+
+body footer .footer_top .adress .icon #facebook_icon:hover {
+  stroke: blue;
+  fill: blue;
+}
+
+body footer .footer_top .adress .icon svg {
+  width: 24px;
+  transition: 0.5s;
+  margin: 5px;
+}
+
+body footer .footer_top .adress .icon svg #path1,
+body footer .footer_top .adress .icon svg #path2,
+body footer .footer_top .adress .icon svg #path3 {
+  fill: black;
+}
+
+body footer .footer_top .adress .icon svg:hover {
+  transition: 0.3s;
+}
+
+body footer .footer_top .adress .icon svg:hover #path1 {
+  fill: url(#SVGID_1_);
+}
+
+body footer .footer_top .adress .icon svg:hover #path2 {
+  fill: url(#SVGID_2_);
+}
+
+body footer .footer_top .adress .icon svg:hover #path3 {
+  fill: url(#SVGID_3_);
+}
+
+body footer .footer_line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+body footer .footer_btm {
+  padding: 15px 0;
+  color: white;
+}
+
