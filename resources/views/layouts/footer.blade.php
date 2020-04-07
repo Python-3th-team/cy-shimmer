@@ -29,8 +29,8 @@
 
     @yield('content')
 
-    <section class=pagetop_footer>
-        <div class="footer_container" id="footer_container">
+    <footer class=pagetop_footer>
+        <div class="footer_container" id="footer">
 
             <div class="footer_logo">
                 <a href="/cy_plant"><img src="{{asset('/img/cy_plant/cy_logo_big.png')}}" alt=""></a>
@@ -70,7 +70,7 @@
                 COPYRIGHT ©2020 中興大學Python職訓班 ALLRIGHTS RESERVED.
             </div>
         </div>
-    </section>
+    </footer>
 
     <script src="{{asset('assets/web/assets/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('assets/popper/popper.min.js')}}"></script>

@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#footer_container">
+                        <a href="#footer">
                             聯絡我們
                         </a>
                     </li>
