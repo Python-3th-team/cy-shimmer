@@ -7,17 +7,22 @@
 @endsection
 <body>
     <div class="shop_store">
+        <div class="navbar">
+            <a href="/cart_total"><button class="btn btn-info">購物車</button></a>
+            <a href="/login"><button class="btn btn-info">登入</button></a>
+            <a href="/logout"><button class="btn btn-info">登出</button></a>
+        </div>
         <header>
             <div class="bg-color">
                 <div class="bg-bar"></div>
                 <div class="cy_logo">
                     <a href="/cy_store">
-                        <img src="./img/cy_plant/cy_logo_big.png" alt="">
+                        <img src="{{asset('/img/cy_plant/cy_logo_big.png')}}" alt="">
                     </a>
                 </div>
                 <div class="shimmer_logo">
                     <a href="/sc_store">
-                        <img src="./img/sc_shop/sc_logo_big.png" alt="">
+                        <img src="{{asset('/img/sc_shop/sc_logo_big.png')}}" alt="">
                     </a>
                 </div>
                 <div class="sc_types" >
@@ -42,7 +47,7 @@
             @foreach ($products as $item)
                 <div class="product">
                     <div class="product_img">
-                        <a href="/cy_store_item">
+                        <a href="/sc_store_item/{{$item->id}}">
                             <img src="{{asset('/storage/'.$item->img)}}" alt="">
                         </a>
                     </div>

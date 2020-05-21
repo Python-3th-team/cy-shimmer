@@ -6,25 +6,28 @@ body{
 }
 
 .shop_store{
+    .navbar{
+        background-color: $color2;
+        width: 100%;
+        height: 65px;
+        display: flex;
+        justify-content: flex-end;
+    }
     header{
         .bg-color{
             background-color: $color1;
             width: 100%;
-            height: 750px;
             display: grid;
-            grid-template-rows: repeat(6 , 125px);
+            grid-template-rows: repeat(6 , 100px);
             grid-template-columns: 1fr 1fr 250px 250px 250px 250px 1fr 1fr;
             .bg-bar{
                 width: 100%;
                 height: 100%;
                 background-color: $color2;
-                grid-row: 3 / 5;
-                grid-column: 1 / 5;
+                grid-area: 3 / 1 / 5 / 5;
             }
             .cy_logo{
-                // display: grid;
-                grid-row: 2 / 4;
-                grid-column: 4;
+                grid-area: 2 / 4 / 4 / 5;
                 align-self: center;
                 z-index: 5;
                 img{
@@ -35,11 +38,14 @@ body{
                 @include types;
                 .cy_type{
                     @include type;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $color5;
+                    }
                 }
             }
             .shimmer_logo{
-                grid-row: 4 / 6;
-                grid-column: 3 / 4;
+                grid-area: 4 / 3 / 6 / 4;
                 z-index: 5;
                 align-self: center;
                 img{
@@ -53,13 +59,61 @@ body{
                 @include types;
                 .sc_type{
                     @include type;
+
+                    &:hover{
+                        background-color: $color5;
+                    }
+                }
+
+            }
+            .cart_flow{
+                grid-area: 3 / 5 / 5 / 8;
+                display: grid;
+                grid-auto-flow: column;
+                align-items: center;
+                position: relative;
+                .cart_list, .cart_check,.cart_finish{
+                    .circle{
+                        @include circle;
+                        background-color: $color5;
+                        &.now{
+                            background-color: $color4;
+                        }
+                    }
+                }
+                .cart_list{
+                    grid-area: 2 / 1 / 2 / 1;
+                    @include center_align;
+                    z-index: 5;
+                }
+                .cart_check{
+                    grid-area: 2 / 3 / 2 / 3;
+                    @include center_align;
+                    z-index: 5;
+                }
+                .cart_finish{
+                    grid-area: 2 / 5 / 2 / 5;
+                    @include center_align;
+                    z-index: 5;
+                }
+                .deco_line3{
+                    @include deco_line();
+                    grid-area: 1 / 1 / 4 / 8;
+                }
+                .triangle{
+                    position: absolute;
+                    right: -10px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 25px 0 25px 50px;
+                    border-color: transparent transparent transparent #ffffff;
+
                 }
             }
-
             .deco_line{
                 @include deco_line();
-                grid-row: 5;
-                grid-column: 1 / span 6;
+                grid-area: 5 / 1 / 6 / span 7;
                 position: relative;
                 span{
                     position: absolute;
@@ -71,19 +125,21 @@ body{
             }
             .deco_line2{
                 @include deco_line();
-                grid-row: 8;
-                grid-column: 4 / span 6;
+                grid-area: 6 / 4 / 6 / span 6;
+                align-self: flex-end;
             }
         }
+
     }
+    // 商品總覽
     main{
         background-color: $color3;
         font-size: $font1;
         line-height: 50px;
+        color: $color4;
         .products_list{
             display: grid;
             grid-template-columns: repeat(3 , 1fr);
-            grid-template-rows: repeat(3 , 420px);
             grid-column-gap: 25px;
             padding: 50px 0 0 0;
             .product{
@@ -96,6 +152,67 @@ body{
                 }
             }
         }
+        // 購物車
+        .cart_container{
+            padding: 100px 0;
+            display: grid;
+            .cart_list{
+                display: grid;
+                .text_list{
+                    display: grid;
+                    grid-template-columns: 2fr 3fr 1fr 1fr 1fr 2fr;
+                    text-align: center;
+                    align-items: flex-end;
+                    &.cart_checked{
+                        grid-template-columns: 2fr 3fr 1fr 1fr 1fr;
+                    }
+                }
 
+                .white_bar{
+                    width: 100%;
+                    border-radius: 10px;
+                    height: 5px;
+                    background-color: $color4;
+                    margin: 5px 0;
+                }
+                .item{
+                    padding: 10px 0;
+                    display: grid;
+                    grid-template-columns: 2fr 3fr 1fr 1fr 1fr 2fr;
+                    align-self: center;
+                    justify-items: center;
+                    &.cart_checked{
+                        grid-template-columns: 2fr 3fr 1fr 1fr 1fr;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .input_block{
+                        display: flex;
+                        justify-self: center;
+                        img{
+                            width: 20px;
+                            cursor: pointer;
+                        }
+                        .qty_input{
+                            width: 30px;
+                            height: 40px;
+                            margin: auto 20px;
+                            @include center_align
+                        }
+                    }
+                    span{
+                        display: flex;
+                        align-self: center;
+                    }
+                    .btn-area{
+                        align-self: center;
+                    }
+                }
+            }
+            .btn-info{
+                margin: 20px auto;
+            }
+        }
     }
 }

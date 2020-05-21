@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteUri;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,17 +25,30 @@ Route::get('/shop_store' , 'FrontController@shop_store');
 Route::get('/cy_store' , 'FrontController@cy_store');
 Route::get('/sc_store' , 'FrontController@sc_store');
 Route::get('/cy_store_item/{item_id}' , 'FrontController@cy_store_item');
-
-
+Route::get('/sc_store_item/{item_id}' , 'FrontController@sc_store_item');
 // Route::get('/sc_shop' , 'FrontController@sc_shop');
 // Route::get('/sc_shop_detail/{id}', 'FrontController@sc_shop_detail');
+
+// 購物車
+Route::post('/add_cart_cy/{cyID}', 'FrontController@add_cart_cy');
+Route::post('/add_cart_sc/{scID}', 'FrontController@add_cart_sc');
+Route::get('/cart_total', 'FrontController@cart_total');
+Route::post('/cart_update/{cartID}', 'FrontController@cart_update');
+Route::post('/cart_delete/{cartID}', 'FrontController@cart_delete');
+Route::get('/cart_checkout', 'FrontController@cart_checkout');
+Route::post('/cart_checkout', 'FrontController@post_cart_checkout');
+
+Route::prefix('cart_ecpay')->group(function(){
+    Route::post('notify', 'FrontController@notifyUrl')->name('notify');
+    Route::post('return', 'FrontController@returnUrl')->name('return');
+});
 
 Route::get('/products' , 'FrontController@products');
 Route::get('/products_detail/{id}', 'FrontController@products_detail');
 
 
 Auth::routes();
-Route::group(['middleware' => ['auth'], 'prefix' => '/home'], function () {
+Route::group(['middleware' => ['admin'], 'prefix' => '/home'], function () {
     //最新消息
     //微光最新消息
     Route::get('/', 'HomeController@index');
@@ -146,11 +160,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => '/home'], function () {
     // summernote ImgUpload
     Route::post('/ajax_upload_img', 'ImgUploadController@ajax_upload_img');
     Route::post('/ajax_delete_img', 'ImgUploadController@ajax_delete_img');
-
-
-
-
-
 
 });
 

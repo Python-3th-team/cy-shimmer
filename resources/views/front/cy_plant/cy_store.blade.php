@@ -14,6 +14,11 @@
 
 
 <div class="shop_store">
+    <div class="navbar">
+        <a href="/cart_total"><button class="btn btn-info">購物車</button></a>
+        <a href="/login"><button class="btn btn-info">登入</button></a>
+        <a href="/logout"><button class="btn btn-info">登出</button></a>
+    </div>
     <header>
         <div class="bg-color">
             <div class="bg-bar"></div>
@@ -58,7 +63,6 @@
                     </div>
                 </div>
             @endforeach
-
         </div>
     </main>
 </div>

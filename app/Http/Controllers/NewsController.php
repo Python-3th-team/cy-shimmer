@@ -20,13 +20,13 @@ class NewsController extends Controller
     public function store(Request $request){
         $news_data = $request->all();
 
-// 暴力上傳
-if($request->hasFile('img')) {
+    // 暴力上傳
+    if($request->hasFile('img')) {
 
-    $file = $request->file('img');
-    $path = $this->fileUpload($file,'news');
-    $news_data['img'] = $path;
-}
+        $file = $request->file('img');
+        $path = $this->fileUpload($file,'news');
+        $news_data['img'] = $path;
+    }
 
 
        $new_news = News::create($news_data);

@@ -49643,6 +49643,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/cy_plant.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/cy_plant.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/cy_store.scss":
 /*!**************************************!*\
   !*** ./resources/sass/cy_store.scss ***!
@@ -49654,15 +49676,77 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/footer.scss":
+/*!************************************!*\
+  !*** ./resources/sass/footer.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/index.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/index.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/sc_shop.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/sc_shop.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/sc_store.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/sc_store.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/shop_store.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/shop_store.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!******************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/cy_store.scss ***!
-  \******************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/footer.scss ./resources/sass/shop_store.scss ./resources/sass/cy_plant.scss ./resources/sass/cy_store.scss ./resources/sass/sc_shop.scss ./resources/sass/sc_store.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\group-topic\group-topic\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Yida\Documents\GitHub\group-topic\group-topic\resources\sass\cy_store.scss */"./resources/sass/cy_store.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\index.scss */"./resources/sass/index.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\footer.scss */"./resources/sass/footer.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\shop_store.scss */"./resources/sass/shop_store.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\cy_plant.scss */"./resources/sass/cy_plant.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\cy_store.scss */"./resources/sass/cy_store.scss");
+__webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\sc_shop.scss */"./resources/sass/sc_shop.scss");
+module.exports = __webpack_require__(/*! C:\Users\Yida\Documents\GitHub\cy-shimmer\resources\sass\sc_store.scss */"./resources/sass/sc_store.scss");
 
 
 /***/ })
